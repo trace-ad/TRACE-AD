@@ -1,0 +1,26 @@
+# TFVision-AD -- the single confirmed configuration.
+# These are exactly the defaults in src/tfvision_ad/config.py.  Override any of
+# them on the command line for ablations (e.g. --ng-window 5, --channels amp_fine,sh).
+
+clip_model: openai/clip-vit-base-patch16
+batch_size: 128
+
+# phase grid
+grid_cols: 28        # R : phase bins per beat
+phase_tol: 4         # DE: +/- column tolerance for phase jitter
+
+# channels
+channels: [amp_fine, sh, amp_ng]
+ng_window: 7         # k : amp_ng column-window width
+
+# image vertical range ("t150")
+vscale: 1.50
+tau: 0.5
+
+# SBD (sh channel)
+sbd_len: 128
+sbd_margin: 48
+
+# reference selection
+ref: clean
+edge_relax: true

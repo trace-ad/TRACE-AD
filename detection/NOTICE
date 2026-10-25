@@ -1,0 +1,19 @@
+TFVision-AD
+Copyright (c) 2026 Anonymous Author(s)
+
+This product includes software developed by third parties:
+
+------------------------------------------------------------------------
+VUS (Volume Under the Surface) metrics
+  Files: evaluation/vus/metricor.py, and the get_range_vus_roc / VUS
+         computation in evaluation/vus/__init__.py
+  Source: https://github.com/TheDatumOrg/VUS (originally johnpaparrizos/VUS)
+  Reference: J. Paparrizos, P. Boniol, T. Palpanas, R. Tsay, A. Elmore,
+             M. Franklin. "Volume Under the Surface: A New Accuracy
+             Evaluation Measure for Time-Series Anomaly Detection."
+             PVLDB 15(11): 2774-2787, 2022.
+  Only the `metricor` class and `generate_curve` needed to compute
+  Range-AUC and VUS were vendored; the unused model zoo and plotting
+  helpers were removed. Logic is kept faithful to reproduce published
+  baseline numbers.
+------------------------------------------------------------------------

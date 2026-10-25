@@ -1,0 +1,27 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# environments
+.venv/
+venv/
+env/
+
+# outputs / artifacts
+out/
+outputs/
+arrays_*/
+*.npz
+*.timing.json
+summary.json
+
+# datasets (kept out of git; see README)
+data/
+datasets/
+segments/
+*_segments.csv
+
+# os
+.DS_Store
